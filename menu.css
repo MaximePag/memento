@@ -1,0 +1,65 @@
+h1, h2, h3{
+    text-align: center;
+}
+h1{
+    font-size: 3em;
+    text-decoration: underline;
+    background-color: red;
+    border-top: 3px black solid;
+    border-bottom: 3px black solid;
+}
+#sommaireicon{
+    display: block;
+    width: 150px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3{
+    text-decoration: underline;
+    background-color: grey;
+}
+body{
+    background: url('fond.jpg') fixed center;
+    background-size: 100%;
+}
+#top, #cmdlinux{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.sommaire{
+    border: 3px black outset;
+    background-color: beige;
+    width: 30%;
+    height: 600px;
+    overflow: auto;
+    margin: 20px;
+    padding: 5px;
+}
+.text{
+    width: 70%;
+    height: 600px;
+    text-align: justify;
+    margin: 20px;
+    padding: 5px;
+}
+#cmdlinuxicon{
+    display: flex;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+#tcmdl, th, td{
+    margin: auto;
+    color: white;
+    background-color: black;
+    border-collapse: collapse;
+    border: 5px grey double;
+}
+.redtxt{
+    color: red;
+}
+.greentxt{
+    color:green;
+}
