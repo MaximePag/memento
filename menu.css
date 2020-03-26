@@ -4,16 +4,21 @@ h1, h2, h3{
 h1{
     font-size: 3em;
     text-decoration: underline;
+}
+header{
+    width: 100%;
     background-color: red;
-    border-top: 3px black solid;
     border-bottom: 3px black solid;
 }
 #sommaireicon{
-    display: block;
+    border: 1px black solid;
+    border-radius: 15%;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
     width: 150px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 80px;
+    margin-left: 92%;
 }
 h3{
     text-decoration: underline;
@@ -23,7 +28,7 @@ body{
     background: url('fond.jpg') fixed center;
     background-size: 100%;
 }
-#top, #cmdlinux{
+#top{
     display: flex;
     flex-wrap: nowrap;
 }
@@ -43,14 +48,14 @@ body{
     margin: 20px;
     padding: 5px;
 }
-#cmdlinuxicon{
+.displayicon{
     display: flex;
     width: 10%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
 }
-#tcmdl, th, td{
+#tcmd, th, td{
     margin: auto;
     color: white;
     background-color: black;

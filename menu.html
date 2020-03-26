@@ -6,14 +6,16 @@
         <title>Memento - Menu</title>
     </head>
     <body>
-        <h1>Memento</h1>
-        <h2>Menu & Sommaire</h2>
-        <img src="sommaire.png" alt="icône sommaire" id="sommaireicon"/>
+        <header id="a0">
+            <a href="#a0"><img src="sommaire.png" alt="icône sommaire" id="sommaireicon"/></a>
+            <h1>Memento</h1>
+            <h2>Menu & Sommaire</h2>
+        </header>
         <div id="top">
             <div class="sommaire">
                 <ol>
-                    <li><a href="#c1">Commandes Terminal Linux</a></li>
-                    <li><a href="#c2">Commandes Terminal GIT</a></li>
+                    <li><a href="#a1">Commandes Terminal Linux</a></li>
+                    <li><a href="#a2">Commandes Terminal GIT</a></li>
                     <li>Balises</li>
                 </ol>
             </div>
@@ -21,48 +23,87 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec sagittis massa. Nulla facilisi. Cras id arcu lorem, et semper purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vel enim mi, in lobortis sem. Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis. Nulla imperdiet mauris sed sapien dignissim id aliquam est aliquam. Maecenas non odio ipsum, a elementum nisi. Mauris non erat eu erat placerat convallis. Mauris in pretium urna. Cras laoreet molestie odio, consequat consequat velit commodo eu. Integer vitae lectus ac nunc posuere pellentesque non at eros. Suspendisse non lectus lorem</p>
             </div>
         </div>
-        <h3 id="c1">Commandes Terminal Linux</h3>
-        <div id="cmdlinuxicon">
+        <h3 id="a1">Commandes Terminal Linux</h3>
+        <div class="displayicon">
             <img src="terminal.png" alt="icône terminal"/>
             <img src="linux.png" alt="icône linux"/>
         </div>
-        <div id="cmdlinux">
-            <table id="tcmdl">
+            <table id="tcmd">
                 <tr>
-                    <th>Commandes Linux</th>
+                    <th>Commandes GIT</th>
                     <th>Description</th>
                 </tr>
                 <tr>
-                    <td>~$cd [Option] [Dossier]</td>
+                    <td>$cd [Option] [Dossier]</td>
                     <td>
                         <p>Navigation dans l’arborescence des répertoires.</p>
-                        <p>Uiliser "~$cd <span class="redtxt">-</span>" permet de revenir au répertoire précédent.</p>
+                        <p>Uiliser "$cd <span class="redtxt">-</span>" permet de revenir au répertoire précédent.</p>
                     </td>
                 </tr>
                 <tr>
-                    <td>~$ls [Option] [Dossier]</td>
+                    <td>$ls [Option] [Dossier]</td>
                     <td>Liste du contenu du répertoire.</td>
                 </tr>
                 <tr>
-                    <td>~$mkdir [Option] [Dossier]</td>
+                    <td>$mkdir [Option] [Dossier]</td>
                     <td>Créer un dossier dans le répertoire actuel.</td>
                 </tr>
                 <tr>
-                    <td>~$rmdir [Option] [Dossier]</td>
+                    <td>$rmdir [Option] [Dossier]</td>
                     <td>
                         <p>Supprime un dossier vide dans le répertoire actuel.</p>
-                        <p>Utiliser "~$rmdir <span class="redtxt">-r</span> <span class="greentxt">[Dossier]</span>" supprime le dossier et son contenu.</p>
+                        <p>Utiliser "$rmdir <span class="redtxt">-r</span> <span class="greentxt">[Dossier]</span>" supprime le dossier et son contenu.</p>
                     </td>
                 </tr>
                 <tr>
-                    <td>~$cp [Option] [Source] [Cible]</td>
+                    <td>$cp [Option] [Source] [Cible]</td>
                     <td>
                         <p>Copie un fichier ou un dossier de la source jusqu'à la cible.</p>
                         <p>Si la commande est sans option cela copiera par défaut un dossier sans son contenu.</p>
-                        <p>Utiliser "~$cp <span class="redtxt">-r</span> <span class="greentxt">[Source] [Cible]</span>" copie le dossier et son contenu.</p>
+                        <p>Utiliser "$cp <span class="redtxt">-r</span> <span class="greentxt">[Source] [Cible]</span>" copie le dossier et son contenu.</p>
                     </td>
                 </tr>
             </table>
+        <h3 id="a2">Commandes Terminal GIT</h3>
+        <div class="displayicon">
+            <img src="terminal.png" alt="icône terminal"/>
+            <img src="github.png" alt="icône git"/>
         </div>
+        <table id="tcmd">
+            <tr>
+                <th>Commandes Linux</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>$cd [Option] [Dossier]</td>
+                <td>
+                    <p>Navigation dans l’arborescence des répertoires.</p>
+                    <p>Uiliser "$cd <span class="redtxt">-</span>" permet de revenir au répertoire précédent.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>$ls [Option] [Dossier]</td>
+                <td>Liste du contenu du répertoire.</td>
+            </tr>
+            <tr>
+                <td>$mkdir [Option] [Dossier]</td>
+                <td>Créer un dossier dans le répertoire actuel.</td>
+            </tr>
+            <tr>
+                <td>$rmdir [Option] [Dossier]</td>
+                <td>
+                    <p>Supprime un dossier vide dans le répertoire actuel.</p>
+                    <p>Utiliser "$rmdir <span class="redtxt">-r</span> <span class="greentxt">[Dossier]</span>" supprime le dossier et son contenu.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>$cp [Option] [Source] [Cible]</td>
+                <td>
+                    <p>Copie un fichier ou un dossier de la source jusqu'à la cible.</p>
+                    <p>Si la commande est sans option cela copiera par défaut un dossier sans son contenu.</p>
+                    <p>Utiliser "$cp <span class="redtxt">-r</span> <span class="greentxt">[Source] [Cible]</span>" copie le dossier et son contenu.</p>
+                </td>
+            </tr>
+        </table>
     </body>
 </html>
