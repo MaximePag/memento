@@ -1,19 +1,24 @@
-h1, h2, h3{
+h2{
+    font-size: 2em;
     text-align: center;
 }
 h1{
-    font-size: 3em;
+    font-size: 4em;
     text-decoration: underline;
 }
-header{
+#header{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    background-color: red;
-    border-bottom: 3px black solid;
+    background: url(fondheader.jpg);
+    background-size: 100%;
+    border-bottom: 2px black solid;
 }
 #sommaireicon{
-    border: 1px black solid;
+    border: 3px black outset;
     border-radius: 15%;
-    background-color: white;
+    background: url(fond.jpg);
+    background-size: 100%;
     position: fixed;
     z-index: 1;
     width: 150px;
@@ -21,8 +26,23 @@ header{
     margin-left: 92%;
 }
 h3{
+    font-size: 3em;
+    text-align: center;
     text-decoration: underline;
     background-color: grey;
+    border: 2px black solid;
+    padding-bottom: 20px;
+    border-bottom: 8px black solid;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+h4{
+    font-size: 2em;
+    text-align: center;
+    text-decoration: wavy;
+    background-color: lightgray;
+    border-bottom: 2px black solid;
+    border-top: 2px black solid;
 }
 body{
     background: url('fond.jpg') fixed center;
@@ -50,17 +70,44 @@ body{
 }
 .displayicon{
     display: flex;
-    width: 10%;
+    width: 15%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
 }
-#tcmd, th, td{
+#tcmd, #tcmd th, #tcmd td{
     margin: auto;
     color: white;
     background-color: black;
     border-collapse: collapse;
     border: 5px grey double;
+}
+#tcmd th{
+    font-size: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#tsynt, #tsynt th, #tsynt td{
+    margin: auto;
+    border-collapse: collapse;
+    border: 1px black solid;
+    text-align: center;
+}
+#tsynt, #tsynt th{
+    border: 3px black solid;
+}
+#tsynt td{
+    background-color: white;
+    border-right: 3px black solid;
+}
+.tsyntc{
+    background-color: brown;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 3em;
+}
+.tsyntd{
+    background-color: orange;
 }
 .redtxt{
     color: red;
