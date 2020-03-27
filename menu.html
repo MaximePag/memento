@@ -14,9 +14,19 @@
         <div id="top">
             <div class="sommaire">
                 <ol>
-                    <li><a href="#a1">Commandes Terminal Linux</a></li>
-                    <li><a href="#a2">Commandes Terminal GIT</a></li>
-                    <li>Balises</li>
+                    <li><p><span class="bold">Les Commandes</span></p>
+                        <ul>
+                            <li><a href="#a1">Commandes Terminal Linux</a></li>
+                            <li><a href="#a2">Commandes Terminal GIT</a></li>
+                        </ul>
+                    </li>
+                    <li><p><span class="bold">Développement</span></p>
+                        <ul>
+                            <li><a href="#a3">HTML</a></li>
+                            <li><a href="#a4">CSS</a></li>
+                            <li><a href="#a5">JS</a></li>
+                        </ul>
+                    </li>
                 </ol>
             </div>
             <div class="text">
@@ -30,7 +40,7 @@
         </div>
             <table id="tcmd">
                 <tr>
-                    <th>Commandes GIT</th>
+                    <th>Commandes Linux</th>
                     <th>Description</th>
                 </tr>
                 <tr>
@@ -71,39 +81,106 @@
         </div>
         <table id="tcmd">
             <tr>
-                <th>Commandes Linux</th>
+                <th>Catégorie</th>
+                <th>Commandes GIT</th>
                 <th>Description</th>
             </tr>
             <tr>
-                <td>$cd [Option] [Dossier]</td>
+                <td><span class="bold">Configuration</span></td>
                 <td>
-                    <p>Navigation dans l’arborescence des répertoires.</p>
-                    <p>Uiliser "$cd <span class="redtxt">-</span>" permet de revenir au répertoire précédent.</p>
+                    <p>$git config --global user.name [Nom du compte GitHub]</p>
+                    <p>$git config --global user.email [EMail du compte GitHub]</p>
+                </td>
+                <td>Ces deux commandes permettent de configurer GIT dans le terminal.</td>
+            </tr>
+            <tr>
+                <td><span class="bold">Statut des fichiers</span></td>
+                <td>$git status</td>
+                <td>Statut des fichiers.</td>
+            </tr>
+            <tr>
+                <td rowspan="4"><span class="bold">Branch</span></td>
+                <td>$git branch -a</td>
+                <td>Lister les branchs sur la branch courante.</td>
+            </tr>
+            <tr>
+                <td>$git branch [Nom de la branch]</td>
+                <td>Créer une nouvelle branch.</td>
+            </tr>
+            <tr>
+                <td>$git checkout [Nom de la branch]</td>
+                <td>Basculer sur la branch.</td>
+            </tr>
+            <tr>
+                <td>$git branch -d [Nom de la branch]</td>
+                <td>
+                    <p>Supprime la branch si elle est locale seulement.</p>
+                    <p>Si la branch est présente sur un repo distant utilisez:</p>
+                    <p>$git <span class="redtxt">origin --delete</span> <span class="greentxt">[Nom de la branch distante]</span></p>
                 </td>
             </tr>
             <tr>
-                <td>$ls [Option] [Dossier]</td>
-                <td>Liste du contenu du répertoire.</td>
-            </tr>
-            <tr>
-                <td>$mkdir [Option] [Dossier]</td>
-                <td>Créer un dossier dans le répertoire actuel.</td>
-            </tr>
-            <tr>
-                <td>$rmdir [Option] [Dossier]</td>
+                <td rowspan="3"><span class="bold">Commit</span></td>
                 <td>
-                    <p>Supprime un dossier vide dans le répertoire actuel.</p>
-                    <p>Utiliser "$rmdir <span class="redtxt">-r</span> <span class="greentxt">[Dossier]</span>" supprime le dossier et son contenu.</p>
+                    <p>$git add [fichier] [fichier]...</p>
+                    <p>$git commit -m "[Message du commit]"</p>
+                </td>
+                <td>
+                    <p>Sélectionne les fichiers pour le commit.</p>
+                    <p>Créer un commit des fichiers précédemment ajoutés.</p>
                 </td>
             </tr>
             <tr>
-                <td>$cp [Option] [Source] [Cible]</td>
+                <td>$git push -u origin [Nom de la branch]</td>
+                <td>Envoi les commits vers le repo distant sur la branch mentionée.</td>
+            </tr>
+            <tr>
+                <td>$git pull -u origin [Nom de la branch]</td>
+                <td>Met à jour les fichiers locaux depuis le repo distant et la branch mentionée.</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><span class="bold">Remote</span></td>
+                <td>$git remote add origin [url du repo]</td>
                 <td>
-                    <p>Copie un fichier ou un dossier de la source jusqu'à la cible.</p>
-                    <p>Si la commande est sans option cela copiera par défaut un dossier sans son contenu.</p>
-                    <p>Utiliser "$cp <span class="redtxt">-r</span> <span class="greentxt">[Source] [Cible]</span>" copie le dossier et son contenu.</p>
+                    <p>Créer un lien entre le dépôt local et le repo distant.</p>
+                    <p><span class="yellowtxt">Exemple:</span></p>
+                    <p>$git remote add origin <span class="redtxt">https://github.com/<span class="greentxt">[Nom du compte]</span>/<span class="greentxt">[Nom du repo]</span>.git</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>$git remote set-url origin [url du repo]</td>
+                <td>Change l'url du dépôt local vers le repo distant.</td>
+            </tr>
+            <tr>
+                <td><span class="bold">Initialiser un projet</span></td>
+                <td colspan="2">
+                    <ol>
+                        <li><span class="yellowtxt">Créer un repo sur GitHub</span></li>
+                        <li><span class="yellowtxt">Sur le terminal: Aller à l'emplacement du dépôt local</span></li>
+                        <li>$git <span class ="redtxt">init</span></li>
+                        <li>$git <span class ="redtxt">add</span> <span class="greentxt">[fichier]</span>...</li>
+                        <li>$git <span class ="redtxt">commit -m</span> "<span class="greentxt">[Message du commit]</span>"</li>
+                        <li>$git <span class ="redtxt">remote add origin</span> <span class="greentxt">[url du repo]</span></li>
+                        <li>$git <span class ="redtxt">push -u origin</span> <span class="greentxt">[Nom de la branch]</span></li>
+                        <li><span class="yellowtxt">Saisisser Compte et Mot de passe</span></li>
+                    </ol>
                 </td>
             </tr>
         </table>
+        <h3 id="a3">Développement HTML</h3>
+        <div class="displayicon">
+            <img src="dev.png" alt="icône dev"/>
+            <img src="html5.png" alt="icône html5"/>
+        </div>
+        <h3 id="a4">Développement CSS</h3>
+        <div class="displayicon">
+            <img src="dev.png" alt="icône dev"/>
+            <img src="css3.png" alt="icône css3"/>
+        </div>
+        <h3 id="a5">Développement JS</h3>
+        <div class="displayicon">
+            <img src="dev.png" alt="icône dev"/>
+            <img src="js.png" alt="icône js"/>
+        </div>
     </body>
 </html>

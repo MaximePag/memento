@@ -68,3 +68,9 @@ body{
 .greentxt{
     color:green;
 }
+.yellowtxt{
+    color:yellow;
+}
+.bold{
+    font-weight: 600;
+}
